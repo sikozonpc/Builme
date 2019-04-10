@@ -1,0 +1,30 @@
+.btn {
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	font-size: 15px;
+	text-transform: uppercase;
+	position: relative;
+	background-color: transparent;
+	font-weight: 600;
+
+	&--primary {
+		border: 2px solid $color-primary-light;
+		padding: 1.5rem 4rem;
+		transition: 0.2s all;
+		text-decoration: none;
+
+		// This is what makes the effect to start from the center
+		background-image: linear-gradient($color-primary-light, $color-primary-light);
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 0% 100%;
+
+		&:hover {
+			transform: scale(1.05);
+			background-size: 100% 100%;
+		}
+	}
+	
+}
+

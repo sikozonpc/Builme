@@ -31,12 +31,14 @@ body {
   .heading-primary--main {
     display: block;
     font-size: 6rem;
-    text-align: center; }
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 3px; }
   .heading-primary--sub {
     display: block;
     font-size: 2.4rem;
     text-align: center;
-    font-weight: 400; }
+    font-weight: 300; }
 
 .heading-secondary {
   font-size: 2rem; }
@@ -52,6 +54,28 @@ body {
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 15px;
+  text-transform: uppercase;
+  position: relative;
+  background-color: transparent;
+  font-weight: 600; }
+  .btn--primary {
+    border: 2px solid #d1b276;
+    padding: 1.5rem 4rem;
+    transition: 0.2s all;
+    text-decoration: none;
+    background-image: linear-gradient(#d1b276, #d1b276);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%; }
+    .btn--primary:hover {
+      transform: scale(1.05);
+      background-size: 100% 100%; }
 
 .page-wrapper__top {
   top: 0;
@@ -101,13 +125,40 @@ body {
   margin-top: 12rem;
   height: 140vh;
   position: relative;
-  background-image: url("https://images.pexels.com/photos/1612351/pexels-photo-1612351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: linear-gradient(to bottom, rgba(44, 44, 43, 0.2), rgba(75, 75, 75, 0.4)), url("https://images.pexels.com/photos/1612351/pexels-photo-1612351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 500px; }
+  background-position: center; }
   .header__text-box {
     position: absolute;
     top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%); }
+  .header__logo-box {
+    position: absolute;
+    top: -7rem;
+    left: 4rem;
+    background-color: #fff;
+    width: 25rem;
+    height: 25rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); }
+
+.logo {
+  font-size: 10rem;
+  color: #444;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .logo--text {
+    font-size: 5rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%); }
