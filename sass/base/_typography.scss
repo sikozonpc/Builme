@@ -1,0 +1,32 @@
+body {
+	font-family: "Open sans" ,sans-serif;
+	font-weight: 400px;
+
+	line-height: 1.7;
+	color: $color-gray-dark;
+}
+
+.heading-primary {
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 4rem;
+	
+	&--main {
+		display: block;
+		font-size: 6rem;
+		text-align: center;
+	}
+	&--sub {
+		display: block;
+		font-size: 2.4rem;
+		text-align: center;
+		font-weight: 400;
+	}
+}
+
+.heading-secondary {
+	font-size: 2rem;
+}
+
+.heading-tertiary {	
+}

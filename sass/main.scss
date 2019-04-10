@@ -1,0 +1,24 @@
+/*
+	Author: @tiago_taquelim
+
+	-> Using BEM methodology ( block__element--modifier )
+	-> Using 7-1 Architecture for sass organization
+*/
+
+// NOTE: Order of imports is important !
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utils";
+
+@import "components/buttons";
+
+@import "layout/page-wrapper";
+@import "layout/grid";
+@import "layout/header";
+
+@import "pages/home";

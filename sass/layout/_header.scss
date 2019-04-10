@@ -1,0 +1,20 @@
+.header {
+	margin-top: 12rem;
+	height: 140vh;
+	position: relative;
+	background-image: url("https://images.pexels.com/photos/1612351/pexels-photo-1612351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	margin-bottom: 500px;
+
+	&__text-box {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		// Shifts in relation to the size to fit
+		transform: translate(-50%, -50%);
+	}
+
+}

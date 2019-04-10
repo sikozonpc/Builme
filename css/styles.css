@@ -1,0 +1,113 @@
+/*
+	Author: @tiago_taquelim
+
+	-> Using BEM methodology ( block__element--modifier )
+	-> Using 7-1 Architecture for sass organization
+*/
+/* Simple Reset */
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  padding: 0 3rem;
+  position: relative; }
+
+body {
+  font-family: "Open sans" ,sans-serif;
+  font-weight: 400px;
+  line-height: 1.7;
+  color: #777; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 4rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    text-align: center; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 400; }
+
+.heading-secondary {
+  font-size: 2rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.page-wrapper__top {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  position: fixed;
+  background-color: #fff;
+  z-index: 999; }
+
+.page-wrapper__bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  position: fixed;
+  background-color: #fff;
+  z-index: 999; }
+
+.row {
+  max-width: 114rem;
+  width: 100%;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin: 8rem auto; }
+  .row [class^="col-"] {
+    font-size: 2rem;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc( (100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc( (100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 *((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc( (100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc( 2 *((100% - 3 * 6rem) / 4) + 6rem); }
+
+.header {
+  margin-top: 12rem;
+  height: 140vh;
+  position: relative;
+  background-image: url("https://images.pexels.com/photos/1612351/pexels-photo-1612351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 500px; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
