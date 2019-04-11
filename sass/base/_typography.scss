@@ -27,7 +27,11 @@ body {
 }
 
 .heading-secondary {
-	font-size: 2rem;
+	font-size: 3rem;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 700;
 }
 
 .heading-tertiary {	

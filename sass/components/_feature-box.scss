@@ -1,0 +1,15 @@
+.feature-box  {
+	text-align: center;
+	background-color: #fff;
+	padding: 3rem;
+	transition: 0.2s all;
+
+	& > i {
+		font-size: 10rem;
+		@include gradientTextEffect;
+	}
+
+	&:hover {
+		transform: translateY(-1rem);
+	}
+}

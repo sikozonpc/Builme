@@ -1,0 +1,49 @@
+.img-slider {
+	position: relative;
+	z-index: 10;
+	&__img {
+		position: relative;
+		width: 80%;
+		height: 480px;
+		background-image: url("../../assets/imgs/house-1.jpeg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin: auto;
+		transition: 0.2s all ease;
+
+		&--desc {
+			font-size: $default-font-size;
+			box-shadow: 0 2rem 50px rgba(#000, 0.15);
+			position: absolute;
+			bottom: -10%;
+			left: -3%;
+			transform: translate(-5%,-5%);
+			width: 50%; // 400px
+			height: 45%; // 250px
+			background-color: #fff;
+			padding: 7rem 4rem;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -15%;
+			left: -7%;
+			width: 15rem;
+			height: 80%;
+			background-color: $color-primary-light;
+			z-index: -1;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: -2%;
+			right: -1%;
+			width: 10rem;
+			height: 10rem;
+			background-color: $color-primary-light;
+			z-index: -1;
+		}
+	}
+}
