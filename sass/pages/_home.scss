@@ -16,8 +16,8 @@
 		top: 0;
 		left: 0;
 		background-color: $color-primary-light;
-		-webkit-clip-path: polygon(0% 15%, 18% 15%, 18% 0, 100% 0, 100% 84%, 81% 84%, 81% 100%, 0 100%);
-		clip-path: polygon(0% 15%, 18% 15%, 18% 0, 100% 0, 100% 84%, 81% 84%, 81% 100%, 0 100%);
+		-webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 100% 0, 100% 84%, 51% 85%, 51% 100%, 0 100%);
+		clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 100% 0, 100% 84%, 51% 85%, 51% 100%, 0 100%);
 		z-index: -1;
 	}
 
@@ -25,10 +25,63 @@
 		position: absolute;
 		top: -10%;
 		right: 20%;
-		color: #222;
-		box-shadow: 0 4rem 30px rgba(#000, 0.10);
-		
+		box-shadow: $box-shadow;		
 		background: #fff;
 		padding: 3rem;
+	}
+}
+
+.house-of-week {
+	position: relative;
+	height: 120vh;
+	width: 100%;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image:  linear-gradient(to bottom, rgba(44,44,43,0.2), rgba(75, 75, 75, 0.4)) ,
+		 url("../../assets/imgs/house-2.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 120vh;
+		width: 100%;
+		-webkit-clip-path: polygon(0 0, 51% 0, 51% 29%, 100% 29%, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, 51% 0, 51% 29%, 100% 29%, 100% 100%, 0 100%);
+	}
+	&__text-box {
+		font-size: $default-font-size;
+		position: absolute;
+		top: -5%;
+		right: 1%;
+		z-index: 2;
+		width: 40%;
+	}
+	&__action-box {
+		position: absolute;
+		display: block;
+		top: 30%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 20rem;
+		height: 20rem;
+		text-align: center;
+		z-index: 5;
+		background-color: #fff;
+		font-size: $default-font-size;
+		padding: 3rem;
+		cursor: pointer;
+		transition: 0.2s all;
+
+		& > i {
+			font-size: 7rem;
+			@include gradientTextEffect;
+		}
+		&:hover {
+			transform:translate(-50%, -50%) scale(1.05);
+			box-shadow: $box-shadow;
+		}
 	}
 }
