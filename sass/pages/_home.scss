@@ -42,7 +42,7 @@
 		top: 0;
 		left: 0;
 		background-image:  linear-gradient(to bottom, rgba(44,44,43,0.2), rgba(75, 75, 75, 0.4)) ,
-		 url("../../assets/imgs/house-2.jpg");
+		 url("../../assets/imgs/house-of-the-week.jpg");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -84,4 +84,8 @@
 			box-shadow: $box-shadow;
 		}
 	}
+}
+
+.section-portfolio {
+	
 }

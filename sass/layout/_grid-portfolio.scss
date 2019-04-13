@@ -1,0 +1,60 @@
+.grid-item {
+	position: relative;
+	width: 100%;
+	height: 30rem;
+	background-color: brown;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: 0.3s all;
+	cursor: pointer;
+
+	&__overlay {
+		transition: 0.3s all;
+		opacity: 0;
+		position: absolute;
+		top: 55%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		z-index: 50;
+		color: #fff;
+	}
+
+	&::after {
+		content: "";
+		transition: 0.3s all;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(44,44,43,.9);
+		opacity: 0;
+		top: 0;
+		left: 0;
+	}
+
+	&:hover &__overlay , &:hover::after {
+		opacity: 1;
+	}
+
+	&--1 {
+		background-image: url("../../assets/imgs/grid-houses/g1.jpg");
+	}
+	&--2 {
+		background-image: url("../../assets/imgs/grid-houses/g2.jpg");
+	}
+	&--3 {
+		background-image: url("../../assets/imgs/grid-houses/g3.jpg");
+	}
+	&--4 {
+		background-image: url("../../assets/imgs/grid-houses/g4.jpg");
+	}
+	&--5 {
+		background-image: url("../../assets/imgs/grid-houses/g5.jpg");
+	}
+	&--6 {
+		background-image: url("../../assets/imgs/grid-houses/g6.jpg");
+	}
+	&--7 {
+		background-image: url("../../assets/imgs/grid-houses/g7.jpg");
+	}
+}

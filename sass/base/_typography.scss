@@ -31,8 +31,39 @@ body {
 	display: inline-block;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	font-weight: 700;
+	font-weight: 400;
+
+	&--underlined {
+		display: inline-block;
+		position: relative;
+		color: #2c2c2b;
+		font-weight: 500;
+		&::after {
+			content: "";
+			width: 30%;
+			height: 2px;
+			background-color: $color-primary-light;
+			position: absolute;
+			bottom: -20%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
 }
 
-.heading-tertiary {	
+.heading-tertiary {
+	font-size: 2.2rem;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 600; 
+}
+
+.heading-light {
+	font-weight: 300;
+	font-size: 1.5rem;
+	color: $color-gray-light;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
