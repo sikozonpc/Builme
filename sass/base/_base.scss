@@ -1,5 +1,7 @@
 /* Simple Reset */
-*, *:after, *:before {
+*,
+*:after,
+*:before {
 	margin: 0;
 	padding: 0;
 	box-sizing: inherit;
@@ -10,9 +12,26 @@ html {
 	// Then 0.625 * 100% = 62.5%;
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+
+	/* Even the padding and margin using rem, so by changing the font-size 
+    we can change the whole design!!!!*/
+	@include respond(big-desktop) {
+		font-size: 75%; // 1rem = 12px,
+	}
+	@include respond(tab-land) {
+		font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+	}
+	@include respond(tab-port) {
+		font-size: 50%; // 1rem = 8px . 8/16 = 50%
+	}
 }
 body {
 	box-sizing: border-box;
 	padding: 0 3rem;
 	position: relative;
+
+	// Removes the white padding
+	@include respond(tab-port) {
+		padding: 0;
+	}
 }

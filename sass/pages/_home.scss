@@ -8,6 +8,21 @@
 	padding-bottom: 14rem;
 	padding-top: 5rem;
 	z-index: 5;
+
+	@include respond(tab-port) {
+		& > .row > .col-1-of-3 {
+			width: 100%;
+			&:not(:last-child) {
+				margin-right: 0;
+				margin-left: 0;
+				margin-bottom: 6rem;
+			}
+		}
+	}
+	@include respond(phone) {
+		padding: 3rem;
+	}
+
 	&::after {
 		content: "";
 		width: 100%;
@@ -16,18 +31,53 @@
 		top: 0;
 		left: 0;
 		background-color: $color-primary-light;
-		-webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 100% 0, 100% 84%, 51% 85%, 51% 100%, 0 100%);
-		clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 100% 0, 100% 84%, 51% 85%, 51% 100%, 0 100%);
+		-webkit-clip-path: polygon(
+			0% 15%,
+			15% 15%,
+			15% 0%,
+			85% 0%,
+			100% 0,
+			100% 84%,
+			51% 85%,
+			51% 100%,
+			0 100%
+		);
+		clip-path: polygon(
+			0% 15%,
+			15% 15%,
+			15% 0%,
+			85% 0%,
+			100% 0,
+			100% 84%,
+			51% 85%,
+			51% 100%,
+			0 100%
+		);
 		z-index: -1;
+
+		@include respond(tab-port) {
+			-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		}
 	}
 
 	& > .title {
 		position: absolute;
 		top: -10%;
 		right: 20%;
-		box-shadow: $box-shadow;		
+		box-shadow: $box-shadow;
 		background: #fff;
 		padding: 3rem;
+
+		@include respond(tab-port) {
+			left: 50%;
+			top: -5%;
+			transform: translateX(-50%);
+			width: 55%;
+		}
+		@include respond(phone) {
+			width: 70%;
+		}
 	}
 }
 
@@ -41,14 +91,25 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		background-image:  linear-gradient(to bottom, rgba(44,44,43,0.2), rgba(75, 75, 75, 0.4)) ,
-		 url("../../assets/imgs/house-of-the-week.jpg");
+		background-image: linear-gradient(
+				to bottom,
+				rgba(44, 44, 43, 0.2),
+				rgba(75, 75, 75, 0.4)
+			),
+			url("../../assets/imgs/house-of-the-week.jpg");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 120vh;
 		width: 100%;
-		-webkit-clip-path: polygon(0 0, 51% 0, 51% 29%, 100% 29%, 100% 100%, 0 100%);
+		-webkit-clip-path: polygon(
+			0 0,
+			51% 0,
+			51% 29%,
+			100% 29%,
+			100% 100%,
+			0 100%
+		);
 		clip-path: polygon(0 0, 51% 0, 51% 29%, 100% 29%, 100% 100%, 0 100%);
 	}
 	&__text-box {
@@ -80,12 +141,8 @@
 			@include gradientTextEffect;
 		}
 		&:hover {
-			transform:translate(-50%, -50%) scale(1.05);
+			transform: translate(-50%, -50%) scale(1.05);
 			box-shadow: $box-shadow;
 		}
 	}
-}
-
-.section-portfolio {
-	
 }

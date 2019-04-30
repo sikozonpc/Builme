@@ -36,6 +36,10 @@ body {
 		line-height: 1.3;
 		letter-spacing: 3px;
 		animation: fromTop 1s ease-out;
+
+		@include respond(phone) {
+			font-size: 5rem;
+		}
 	}
 	&--sub {
 		display: block;
@@ -51,6 +55,13 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: 400;
+
+	@include respond(tab-port) {
+		font-size: 2.5rem;
+	}
+	@include respond(phone) {
+		font-size: 2rem;
+	}
 
 	&--underlined {
 		display: inline-block;
@@ -76,6 +87,10 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: 600;
+
+	@include respond(tab-port) {
+		font-size: 2rem;
+	}
 }
 
 .heading-light {

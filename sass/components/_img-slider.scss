@@ -1,10 +1,11 @@
 .img-slider {
 	position: relative;
 	z-index: 10;
+
 	&__img {
 		position: relative;
 		width: 80%;
-		height: 480px;
+		height: 48rem;
 		background-image: url("../../assets/imgs/house-1.jpeg");
 		background-position: center;
 		background-repeat: no-repeat;
@@ -12,17 +13,37 @@
 		margin: auto;
 		transition: 0.2s all ease;
 
+		@include respond(tab-port) {
+			height: 40rem;
+		}
+		@include respond(phone) {
+			width: 100%;
+		}
+
 		&--desc {
 			font-size: $default-font-size;
 			box-shadow: 0 2rem 50px rgba(#000, 0.15);
 			position: absolute;
 			bottom: -10%;
 			left: -3%;
-			transform: translate(-5%,-5%);
+			transform: translate(-5%, -5%);
 			width: 50%; // 400px
 			height: 45%; // 250px
 			background-color: #fff;
-			padding: 7rem 4rem;
+			padding: 6rem 4rem;
+
+			@include respond(tab-port) {
+				width: 50%;
+				height: 45%;
+				padding: 5rem 2rem;
+			}
+			@include respond(phone) {
+				width: 90%;
+				height: 40%;
+				padding: 3.5rem 2rem;
+				transform: translateX(-50%);
+				left: 50%;
+			}
 		}
 
 		&::after {
@@ -34,6 +55,11 @@
 			height: 80%;
 			background-color: $color-primary-light;
 			z-index: -1;
+
+			@include respond(phone) {
+				height: 0;
+				display: none;
+			}
 		}
 		&::before {
 			content: "";
@@ -44,6 +70,11 @@
 			height: 10rem;
 			background-color: $color-primary-light;
 			z-index: -1;
+
+			@include respond(phone) {
+				height: 0;
+				display: none;
+			}
 		}
 	}
 }

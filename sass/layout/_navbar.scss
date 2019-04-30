@@ -73,7 +73,7 @@
 		height: 100vh;
 		background-color: rgba(85, 85, 85, 0.712);
 		top: 0;
-		z-index: 1000;
+		z-index: -1;
 		transition: 0.4s all ease-in;
 		opacity: 0;
 	}
@@ -105,5 +105,6 @@
 	}
 	&__checkbox:checked ~ &__backgroundclose {
 		opacity: 1 !important;
+		z-index: 1000;
 	}
 }

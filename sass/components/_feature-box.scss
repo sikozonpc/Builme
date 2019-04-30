@@ -1,4 +1,4 @@
-.feature-box  {
+.feature-box {
 	text-align: center;
 	background-color: #fff;
 	padding: 3rem;
@@ -11,5 +11,9 @@
 
 	&:hover {
 		transform: translateY(-1rem);
+
+		@include respond(tab-port) {
+			transform: translateX(-1.3rem);
+		}
 	}
 }
