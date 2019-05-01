@@ -1,16 +1,20 @@
 .footer {
 	position: relative;
 	width: 100%;
-	background-color:  $color-gray-light;
+	background-color: $color-gray-light;
 	height: 110vh;
 	font-size: 2.4rem;
 	padding: 3rem;
 	z-index: 2;
 	text-align: center;
 
+	@include respond(tab-port) {
+		height: 100%;
+	}
+
 	&__text-box {
 		font-size: 1.8rem;
-		margin: 3rem auto;	
+		margin: 3rem auto;
 		max-width: 450px;
 	}
 
@@ -31,6 +35,7 @@
 		& > ul {
 			list-style: inherit;
 			& > li {
+				z-index: 100;
 				position: relative;
 				display: inline-block;
 				margin: 1rem;
@@ -51,11 +56,15 @@
 					border-radius: 100rem;
 					border: 1px solid rgb(182, 175, 175);
 					z-index: -1;
+
+					@include respond(tab-port) {
+						border: 0;
+					}
 				}
-				
-				& > .social-link{
+
+				& > .social-link {
 					color: $color-primary-light;
-					
+
 					&:hover {
 						color: $color-primary;
 					}

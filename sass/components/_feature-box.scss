@@ -4,6 +4,11 @@
 	padding: 3rem;
 	transition: 0.2s all;
 
+	@include respond(tab-port) {
+		display: flex;
+		flex-flow: column wrap;
+	}
+
 	& > i {
 		font-size: 10rem;
 		@include gradientTextEffect;
