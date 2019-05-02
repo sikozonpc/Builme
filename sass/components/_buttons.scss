@@ -15,7 +15,10 @@
 		text-decoration: none;
 
 		// This is what makes the effect to start from the center
-		background-image: linear-gradient($color-primary-light, $color-primary-light);
+		background-image: linear-gradient(
+			$color-primary-light,
+			$color-primary-light
+		);
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-size: 0% 100%;
@@ -29,6 +32,4 @@
 		color: $color-primary;
 		margin-top: 3rem;
 	}
-	
 }
-

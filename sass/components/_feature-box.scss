@@ -3,6 +3,7 @@
 	background-color: #fff;
 	padding: 3rem;
 	transition: 0.2s all;
+	font-size: $default-font-size;
 
 	@include respond(tab-port) {
 		display: flex;
