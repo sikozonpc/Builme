@@ -49,6 +49,10 @@ body {
     body {
       padding: 0; } }
 
+::selection {
+  background-color: #d1b276;
+  color: #fff; }
+
 @keyframes fadeIn {
   0% {
     opacity: 0; }
@@ -288,11 +292,13 @@ body {
   background-color: #fff;
   padding: 3rem;
   transition: 0.2s all;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  height: 435px; }
   @media (max-width: 56.25em) {
     .feature-box {
       display: flex;
-      flex-flow: column wrap; } }
+      flex-flow: column wrap;
+      height: auto; } }
   .feature-box > i {
     font-size: 10rem;
     color: transparent;
@@ -398,6 +404,8 @@ body {
     height: 70vh; }
     .header--video::after {
       display: none; }
+  .header--2::after {
+    background-image: linear-gradient(to bottom, rgba(44, 44, 43, 0.5), rgba(75, 75, 75, 0.8)), url("../../assets/imgs/stathere_hero.jpg") !important; }
   @media (max-width: 37.5em) {
     .header {
       height: 100vh; } }
@@ -849,6 +857,8 @@ body {
         width: 90%; } }
   .house-of-week__action-box {
     position: absolute;
+    text-decoration: none;
+    color: inherit;
     display: block;
     top: 30%;
     left: 50%;

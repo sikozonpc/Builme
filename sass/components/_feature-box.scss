@@ -4,10 +4,12 @@
 	padding: 3rem;
 	transition: 0.2s all;
 	font-size: $default-font-size;
+	height: 435px;
 
 	@include respond(tab-port) {
 		display: flex;
 		flex-flow: column wrap;
+		height: auto;
 	}
 
 	& > i {

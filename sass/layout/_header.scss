@@ -13,6 +13,16 @@
 			display: none;
 		}
 	}
+	&--2 {
+		&::after {
+			background-image: linear-gradient(
+					to bottom,
+					rgba(44, 44, 43, 0.5),
+					rgba(75, 75, 75, 0.8)
+				),
+				url("../../assets/imgs/stathere_hero.jpg") !important;
+		}
+	}
 
 	@include respond(phone) {
 		height: 100vh;
