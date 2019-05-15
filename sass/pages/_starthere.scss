@@ -1,0 +1,16 @@
+.starthere-form {
+	font-display: $default-font-size;
+	&__input {
+		max-width: 400px;
+		height: 3rem;
+		border: 1px #eee solid;
+		border-radius: 6px;
+	}
+	&__label {
+		color: #333;
+	}
+	&__submit-btn {
+	}
+	&__text-are {
+	}
+}
