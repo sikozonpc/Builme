@@ -89,6 +89,7 @@
 						>Full name</label
 					>
 					<input
+						required
 						type="text"
 						id="name"
 						class="starthere-form__input"
@@ -98,15 +99,17 @@
 						>Email address</label
 					>
 					<input
+						required
 						type="email"
 						id="email"
 						class="starthere-form__input"
 					/>
 
 					<label for="country" class="starthere-form__label"
-						>Country</label
+						>Country and City name</label
 					>
 					<input
+						required
 						type="text"
 						id="country"
 						class="starthere-form__input"
@@ -116,16 +119,19 @@
 						>Tell us something</label
 					>
 					<textarea
+						required
 						id="textarea"
 						class="starthere-form__text-area"
 						placeholder="What's your dream house? Tell us something about you :)"
 					></textarea>
 
-					<p>
+					<p style="margin-bottom: 3rem">
 						When sent we will reach to you so we can arrange a
 						meeting.
 					</p>
-					<button class="btn btn--secondary">Send</button>
+					<button class="btn btn--secondary">
+						Send
+					</button>
 				</form>
 			</section>
 		</main>

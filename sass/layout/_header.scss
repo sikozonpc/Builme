@@ -5,14 +5,6 @@
 	background-color: $color-gray-light;
 	z-index: 1;
 
-	&--video {
-		width: 100%;
-		height: 70vh;
-
-		&::after {
-			display: none;
-		}
-	}
 	&--2 {
 		&::after {
 			background-image: linear-gradient(
@@ -21,6 +13,18 @@
 					rgba(75, 75, 75, 0.8)
 				),
 				url("../../assets/imgs/stathere_hero.jpg") !important;
+		}
+	}
+	&--3 {
+		width: 100%;
+		height: 70vh;
+		&::after {
+			background-image: linear-gradient(
+					to bottom,
+					rgba(44, 44, 43, 0.2),
+					rgba(75, 75, 75, 0.4)
+				),
+				url("../../assets/imgs/aboutus-header.jpg") !important;
 		}
 	}
 

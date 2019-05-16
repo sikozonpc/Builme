@@ -201,7 +201,8 @@ body {
   text-transform: uppercase;
   position: relative;
   background-color: transparent;
-  font-weight: 600; }
+  font-weight: 600;
+  cursor: pointer; }
   .btn--primary {
     border: 2px solid #d1b276;
     padding: 1.5rem 4rem;
@@ -214,6 +215,18 @@ body {
     .btn--primary:hover {
       transform: scale(1.05);
       background-size: 100% 100%; }
+  .btn--secondary {
+    background-color: #c9a254;
+    color: #fff;
+    max-width: 300px;
+    border: 2px solid #d1b276;
+    padding: 1.5rem 4rem;
+    transition: 0.2s all;
+    text-decoration: none; }
+    .btn--secondary:hover {
+      background-color: transparent;
+      border-color: #d1b276;
+      color: #c9a254; }
   .btn--text {
     color: #c9a254;
     margin-top: 3rem; }
@@ -399,13 +412,13 @@ body {
   position: relative;
   background-color: #f5f5f5;
   z-index: 1; }
-  .header--video {
-    width: 100%;
-    height: 70vh; }
-    .header--video::after {
-      display: none; }
   .header--2::after {
     background-image: linear-gradient(to bottom, rgba(44, 44, 43, 0.5), rgba(75, 75, 75, 0.8)), url("../../assets/imgs/stathere_hero.jpg") !important; }
+  .header--3 {
+    width: 100%;
+    height: 70vh; }
+    .header--3::after {
+      background-image: linear-gradient(to bottom, rgba(44, 44, 43, 0.2), rgba(75, 75, 75, 0.4)), url("../../assets/imgs/aboutus-header.jpg") !important; }
   @media (max-width: 37.5em) {
     .header {
       height: 100vh; } }
@@ -931,11 +944,27 @@ body {
         margin-bottom: 3rem; }
 
 .starthere-form {
-  font-display: 1.6rem; }
+  font-size: 1.6rem;
+  display: flex;
+  text-align: start;
+  flex-flow: column;
+  justify-content: center;
+  margin: 5rem auto; }
   .starthere-form__input {
     max-width: 400px;
     height: 3rem;
     border: 1px #eee solid;
-    border-radius: 6px; }
+    border-radius: 4px;
+    margin-bottom: 3rem;
+    padding: 1.5rem; }
+    .starthere-form__input:required {
+      border-left: 2px solid #d1b276; }
   .starthere-form__label {
     color: #333; }
+  .starthere-form__text-area {
+    max-width: 700px;
+    height: 200px;
+    border: 1px #eee solid;
+    font-size: 2rem;
+    color: #111;
+    padding: 1.5rem; }

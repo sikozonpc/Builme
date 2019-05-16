@@ -7,6 +7,7 @@
 	position: relative;
 	background-color: transparent;
 	font-weight: 600;
+	cursor: pointer;
 
 	&--primary {
 		border: 2px solid $color-primary-light;
@@ -26,6 +27,21 @@
 		&:hover {
 			transform: scale(1.05);
 			background-size: 100% 100%;
+		}
+	}
+	&--secondary {
+		background-color: $color-primary;
+		color: #fff;
+		max-width: 300px;
+		border: 2px solid $color-primary-light;
+		padding: 1.5rem 4rem;
+		transition: 0.2s all;
+		text-decoration: none;
+
+		&:hover {
+			background-color: transparent;
+			border-color: $color-primary-light;
+			color: $color-primary;
 		}
 	}
 	&--text {
